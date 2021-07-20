@@ -1,0 +1,59 @@
+/* ################ 
+SETTINGS :
+Se usa con preprocesadores y contiene fuentes, definiciones de colores, etc.
+################ */
+@import './settings/settings';
+
+
+/* ################ 
+TOOLS :
+Herramientas : mixins y funciones de uso mundial. Es importante no generar ningún CSS en las primeras 2 capas.
+################ */
+@import './tools/functions';
+@import './tools/mixins';
+
+
+/* ################ 
+GENERICS :
+restablecer y / o normalizar estilos, definición de tamaño de caja, etc. Esta es la primera capa que genera CSS real.
+################ */
+@import './generic/normalize';
+@import './generic/base';
+
+
+/* ################ 
+ELEMENTS :
+Estilo para elementos HTML desnudos (como H1, A, etc.). Estos vienen con un estilo predeterminado del navegador, por lo que podemos redefinirlos aquí.
+################ */
+@import './elements/elements';
+
+
+/* ################ 
+KEYFRAMES : Boques de codigos utilizados para las animaciones
+################ */
+@import './keyframes/keyframes';
+
+
+/* ################ 
+OBJECTS : 
+Clases reutilizables en cualquier contexto. selectores basados ​​en clases que definen patrones de diseño no decorados, por ejemplo, un objeto multimedia conocido de OOCSS
+################ */
+@import './objects/container';
+@import './objects/grid';
+@import './objects/flexbox';
+@import './objects/text';
+
+
+/* ################ 
+COMPONENTS : 
+Componentes específicos de la interfaz de usuario. 
+Aquí es donde se lleva a cabo la mayor parte de nuestro trabajo y nuestros componentes de la interfaz de usuario a menudo se componen de objetos y componentes.
+################ */
+@import './components/footer';
+@import './components/header';
+
+/* ################ 
+UTILITIES : 
+utilidades y clases auxiliares con capacidad para anular cualquier cosa que vaya antes en el triángulo (el !important solo es permitido aquí) 
+################ */
+@import './utilities/utilities';

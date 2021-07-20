@@ -1,0 +1,90 @@
+// ==========================================================================
+// FontStack
+// ==========================================================================
+
+// Importación de la typografia desde URL externa
+$font-url--google   : url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet');
+
+$font-size-default : 15px;
+$font-family-brand : 'Roboto Condensed', sans-serif;
+$font-secondary    : 'Open Sans', sans-serif;
+
+$font-size-map: (
+    small  : 17px,
+    medium : 16px,
+    large  : 15px,
+    xlarge : $font-size-default,
+);
+
+// ==========================================================================
+// COLORS : Eje.: background: color( primary, light );
+// ==========================================================================
+$colors: (
+    primary: (
+        base     : #016D38,
+        light    : #02d46f,
+        dark     : #015005
+    ),
+    secondary: (
+        base     : #ffdc5d,
+        light    : #fff078,
+        dark     : #c9ab2a
+    ),
+    alerts: (
+        sucess   : #28A745,
+        error    : #DC3545,
+        warning  : #FFC100,
+        info     : #0074FC
+    ),
+    grayscale: (
+        white    : #ffffff,
+        -1       : #f2f2f2,
+        -2       : #eeeeee,
+        -3       : #cccccc,
+        -4       : #999999,
+        -5       : #666666,
+        -6       : #333333,
+        -7       : #4A4A4A,  
+        base     : #1b1b1b,
+        black    : #000000, 
+    ),
+);
+
+// ==========================================================================
+// sizes : Eje.: padding: map-get($sizes, "tiny");
+// ==========================================================================
+
+// px to rem
+@function rem($sizepx, $font-size-map-arg: $font-size-default) {
+    @return $sizepx / $font-size-map-arg * 1rem;
+}
+
+$sizes: (
+    tiny   : rem(12px),
+    small  : rem(14px), 
+    base   : rem(16px), 
+    thumb  : rem(20px),
+    half   : rem(24px), 
+    medium : rem(26px),
+    large  : rem(28px), 
+    xlarge : rem(30px),
+    huge   : rem(32px)
+);
+
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+
+$breakpoints: (
+    small  : 576px,
+    medium : 768px,
+    large  : 992px,
+    xlarge : 1200px,
+    xxlarge: 1400px,
+);
+
+// ==========================================================================
+// Alignment
+// ==========================================================================
+
+$alignment: left, center, right, justify;

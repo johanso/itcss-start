@@ -1,0 +1,62 @@
+// ======================================================================
+// MediaQuery (min-width) @include mq-min(sm) MOBILE FIRST
+// ======================================================================
+@mixin mq-min($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($map: $breakpoints, $key: $breakpoint );
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+        @warn 'Invalid breakpoint : #{$breakpoint}';
+    }
+}
+
+
+// ======================================================================
+// MediaQuery (max-width) @include mq-max(sm)
+// ======================================================================
+@mixin mq-max($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+       $breakpoint-value: map-get($breakpoints, $breakpoint);
+       @media (max-width: ($breakpoint-value - 1)) {
+          @content;
+       }
+    } @else {
+       @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+ }
+ 
+
+// ======================================================================
+// Mixins para la generación de los colores de los textos y backgrounds
+// ======================================================================
+@mixin color-modifiers($attribute: 'background', $property: 'color') {
+    @each $name, $color in $colors {
+        &-#{$name} {
+            @each $tone, $hex in $color {
+                &-#{$tone} {
+                #{$property}: $hex;
+                }
+            }
+        }
+    }
+}
+
+
+// ==========================================================================
+// Mixins BEM selectors (Block, Element, Modifier)
+// ==========================================================================
+// Ej.: @include e(title) {}
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+
+// Ej.: @include m(primary) {}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}

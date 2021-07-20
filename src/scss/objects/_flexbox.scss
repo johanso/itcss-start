@@ -1,0 +1,19 @@
+// Flexbox display
+$dflexs: flex, inline-flex;
+    @each $dflex in $dflexs {
+    .d-#{$dflex}{
+        display: $dflex;
+    }
+}
+
+// Flex Flow Direction : applies to flex containers
+$directions: row, row-reverse, column, column-reverse;
+@each $name, $value in $breakpoints {
+    @include mq-min($name) {
+        @each $dflex in $directions {
+           .fd-#{$dflex}--#{$name}{
+              flex-direction: $dflex;
+           }
+        }
+    }
+}

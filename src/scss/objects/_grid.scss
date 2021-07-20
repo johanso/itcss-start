@@ -1,0 +1,25 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    
+    @for $i from 1 through 12 {
+        &-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+
+    @each $name, $value in $breakpoints {
+        @include mq-min($name) {
+            @for $i from 1 through 12 {
+                &--#{$name}-#{$i} { 
+                    grid-column: span ($i);
+                }
+            }
+        }
+    }
+    
+}
+
+
+ 

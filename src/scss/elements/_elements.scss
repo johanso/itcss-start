@@ -1,0 +1,31 @@
+
+p {
+    font-size: map-get($sizes , base );
+    margin: map-get($sizes , base ) / 2.5 0 map-get($sizes , base ) / 1.5;
+}
+
+h1 {
+    font-size: map-get($sizes , xlarge );
+    margin: map-get($sizes , xlarge ) / 2.5 0 map-get($sizes , xlarge ) / 1.5;
+}
+h2 {
+    font-size: map-get($sizes , large );
+    margin: map-get($sizes , large ) / 2.5 0 map-get($sizes , large ) / 1.5;
+}
+h3 {
+    font-size: map-get($sizes , medium );
+    margin: map-get($sizes , medium ) / 2.5 0 map-get($sizes , medium ) / 1.5;
+}
+h4 {
+    font-size: map-get($sizes , half );
+    margin: map-get($sizes , half ) / 2.5 0 map-get($sizes , half ) / 1.5;
+}
+h5 {
+    font-size: map-get($sizes , thumb );
+    margin: map-get($sizes , thumb ) / 2.5 0 map-get($sizes , thumb ) / 1.5;
+}
+h6 {
+    font-size: map-get($sizes , base );
+    margin: map-get($sizes , base ) / 2.5 0 map-get($sizes , base ) / 1.5;
+}
+

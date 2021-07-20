@@ -1,0 +1,30 @@
+*, 
+*:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body, html {
+    height: 100%;
+    font-size: map-get( $font-size-map, small );
+    
+    @include mq-min(medium) {
+        font-size: map-get( $font-size-map, medium );
+    }
+
+    @include mq-min(large) {
+        font-size: map-get( $font-size-map, large );
+    }
+
+    @include mq-min(xlarge) {
+        font-size: map-get( $font-size-map, xlarge );
+    }
+    
+}
+
+body {
+    color: color(grayscale, base);
+    font-weight: 400;
+    font-family: $font-family-brand;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}  
