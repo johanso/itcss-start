@@ -55,6 +55,10 @@ $colors: (
         base     : #1b1b1b,
         black    : #000000, 
     ),
+    controls: (
+        base     : #0074FC,
+        dark     : #0056B3
+    )
 );
 
 // ==========================================================================
@@ -67,15 +71,16 @@ $colors: (
 }
 
 $sizes: (
-    tiny   : rem(12px),
-    small  : rem(14px), 
-    base   : rem(16px), 
-    thumb  : rem(20px),
-    half   : rem(24px), 
-    medium : rem(26px),
-    large  : rem(28px), 
-    xlarge : rem(30px),
-    huge   : rem(32px)
+    tinysmall   : rem(10px),
+    tiny        : rem(12px),
+    small       : rem(14px), 
+    base        : rem(16px), 
+    thumb       : rem(20px),
+    half        : rem(24px), 
+    medium      : rem(26px),
+    large       : rem(28px), 
+    xlarge      : rem(30px),
+    huge        : rem(32px)
 );
 
 // ==========================================================================

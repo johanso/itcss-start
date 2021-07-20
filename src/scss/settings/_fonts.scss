@@ -109,3 +109,20 @@
     font-style: normal;
     font-display: block;
 }
+
+// ==========================================================================
+// Importación de fuente de iconos
+// ==========================================================================
+
+@font-face {
+    font-family: 'ds';
+    src:    url('../../fonts/icons/ds.eot?uk8w17');
+    src:    url('../../fonts/icons/ds.eot?uk8w17#iefix') format('embedded-opentype'),
+            url('../../fonts/icons/ds.ttf?uk8w17') format('truetype'),
+            url('../../fonts/icons/ds.woff?uk8w17') format('woff'),
+            url('../../fonts/icons/ds.svg?uk8w17#ds') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+ 

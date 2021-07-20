@@ -34,4 +34,11 @@ body {
     font-family: $font-family-brand;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-}  
+} 
+
+::placeholder, ::-ms-input-placeholder {
+    color: color( grayscale, -4 );
+    opacity: 1;
+}
+ 
+ 

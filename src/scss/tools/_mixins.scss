@@ -55,6 +55,66 @@
     }
 }
 
+// ==========================================================================
+// Box shadows : Eje.: @include box-shadow(5);
+// ==========================================================================
+@mixin box-shadow($z-depth: 1, $strength: 1, $color: black) {
+    @if $z-depth == 1 {
+      box-shadow: 0 1px 3px rgba($color, $strength * 0.14), 0 1px 2px rgba($color, $strength * 0.20);
+    }
+    @if $z-depth == 2 {
+      box-shadow: 0 3px 6px rgba($color, $strength * 0.16), 0 3px 6px rgba($color, $strength * 0.20);
+    }  
+    @if $z-depth == 3 {
+      box-shadow: 0 10px 20px rgba($color, $strength * 0.19), 0 6px 6px rgba($color, $strength * 0.20);
+    }    
+    @if $z-depth == 4 {
+      box-shadow: 0 15px 30px rgba($color, $strength * 0.25), 0 10px 10px rgba($color, $strength * 0.20);    
+    }
+    @if $z-depth == 5{
+      box-shadow: 0 20px 40px rgba($color, $strength * 0.30), 0 15px 12px rgba($color, $strength * 0.20);   
+    }
+    @if ($z-depth < 1) or ($z-depth > 5) {
+      @warn "$z-depth must be between 1 and 5";
+    }
+}
+
+// ==========================================================================
+// Mixins para la generación de los botones : @include button( ... );
+// ==========================================================================
+
+@mixin button($bg, $color: #ffffff ) { 
+    background: $bg;
+    color: $color;
+    &:hover {
+        background: darken($bg, 7%);
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.15rem rgba(color( primary, base ), 0.25);
+        text-decoration: none;
+    }
+    &:active {
+        background: darken($bg, 10%);
+    } 
+    &.disabled, 
+    &:disabled {
+        opacity: .55;
+        color: color( grayscale, -5 );
+        background: color( grayscale, -3 );
+        box-shadow: none;
+        cursor: auto;
+        &:hover {
+            background: color( grayscale, -3 );
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
 
 // ==========================================================================
 // Mixins BEM selectors (Block, Element, Modifier)

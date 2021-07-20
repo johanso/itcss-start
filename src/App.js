@@ -7,7 +7,11 @@ const App = () => {
     return (
         <>
             <Header title="FirstApp" />
-            ssssss
+
+            <div className="container mt-xlarge">
+                Content
+            </div>
+
             <Footer />
         </>
     )
