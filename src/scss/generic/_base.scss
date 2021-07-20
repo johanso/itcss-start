@@ -1,6 +1,13 @@
 *, 
 *:before, *:after {
 	box-sizing: border-box;
+    outline: 0 solid;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        outline: 0px solid;
+    }
 }
 
 html, body, html {
