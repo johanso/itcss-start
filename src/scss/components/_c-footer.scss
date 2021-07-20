@@ -1,0 +1,14 @@
+
+.c-footer {
+
+    background: color(grayscale, -1);
+    padding: map-get($sizes, tiny);
+    margin-top: auto;
+
+    @include e(copy) {
+        font-size: map-get($sizes, tiny);
+        text-align: center;
+        color: color(grayscale, -5);
+        margin: 0;
+    }
+}

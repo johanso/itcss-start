@@ -1,0 +1,23 @@
+
+.c-header {
+
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.11);
+    padding: map-get($sizes, tiny);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    @include e(logo) {}
+
+    @include e(title) {
+        margin: 0;
+        font-size: map-get($sizes, half);
+    }
+
+    @include e(menu) {}
+
+}

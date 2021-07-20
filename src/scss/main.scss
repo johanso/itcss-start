@@ -41,6 +41,7 @@ Clases reutilizables en cualquier contexto. selectores basados ​​en clases q
 @import './objects/container';
 @import './objects/grid';
 @import './objects/flexbox';
+@import './objects/spacing';
 @import './objects/text';
 
 
@@ -49,8 +50,8 @@ COMPONENTS :
 Componentes específicos de la interfaz de usuario. 
 Aquí es donde se lleva a cabo la mayor parte de nuestro trabajo y nuestros componentes de la interfaz de usuario a menudo se componen de objetos y componentes.
 ################ */
-@import './components/footer';
-@import './components/header';
+@import './components/c-header';
+@import './components/c-footer';
 
 /* ################ 
 UTILITIES : 

@@ -23,20 +23,25 @@ $font-size-map: (
 // ==========================================================================
 $colors: (
     primary: (
-        base     : #016D38,
-        light    : #02d46f,
-        dark     : #015005
+        base     : #FF5722,
+        light    : #FFCCBC,
+        dark     : #E64A19
     ),
     secondary: (
-        base     : #ffdc5d,
-        light    : #fff078,
-        dark     : #c9ab2a
+        base     : #2196F3,
+        light    : #BBDEFB,
+        dark     : #1976D2
+    ),
+    complementary: (
+        base     : #FF9800,
+        light    : #FFE0B2,
+        dark     : #F57C00
     ),
     alerts: (
-        sucess   : #28A745,
-        error    : #DC3545,
-        warning  : #FFC100,
-        info     : #0074FC
+        sucess   : #8BC34A,
+        error    : #F44336,
+        warning  : #FFC107,
+        info     : #00BCD4
     ),
     grayscale: (
         white    : #ffffff,
@@ -76,7 +81,6 @@ $sizes: (
 // ==========================================================================
 // Breakpoints
 // ==========================================================================
-
 $breakpoints: (
     small  : 576px,
     medium : 768px,
@@ -103,4 +107,3 @@ $weigth: (
     extrabold: 800, 
     black    : 900
 )
-
